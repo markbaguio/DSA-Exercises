@@ -12,13 +12,20 @@ class HashTable:
             total += ord(char)
         return total % self.MAXARRSIZE
 
-    def add_value(self, key, value):
-        """This function adds value into the Hash Table."""
+    # def add_value(self, key, value): instead of calling the add_value function every time,
+    # the __setitem__ allows for a more concise way of adding value into the Hash Table
+    def __setitem__(self, key, value):
+        """This function adds value into the Hash Table.
+            Syntax: object[key] = value"""
         k = self.get_hash(key)
         self.array[k] = value
 
-    def get_value(self, key):
-        """This function returns the value of the given key."""
+    # def get_value(self, key): instead of calling the get_value function every time,
+    # the __getitem__ allows for a more concise way of retrieving value in the Hash Table
+    # by using its assigned key.
+    def __getitem__(self, key):
+        """This function returns the value of the given key.
+            Syntax: object[key]"""
         """This is a simple get function."""
         # for element in self.array:
         #     if self.get_hash(key):
@@ -29,9 +36,12 @@ class HashTable:
 
 if __name__ == "__main__":
     HT = HashTable()
-    HT.add_value("Mark Baguio", "Ada Wong")
-    HT.add_value("mark", "Rebecca Chambers")
-    HT.add_value("september 12", 20000000)
-    print(HT.get_value("Mark Baguio"))
-    print(HT.get_value("september 12"))
+    # HT.add_value("Mark Baguio", "Ada Wong")
+    # HT.add_value("mark", "Rebecca Chambers")
+    # HT.add_value("september 12", 20000000)
+    # print(HT.get_value("Mark Baguio"))
+    # print(HT.get_value("september 12"))
+    HT["Mark Baguio"] = "Ada Wong"
+    print(HT["Mark Baguio"])
+    help(HashTable)
     # print(HT.array, end=" ")
