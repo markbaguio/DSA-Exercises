@@ -1,6 +1,9 @@
 class HashTable:
-    def __init__(self):
-        self.MAXARRSIZE = 100
+    def __init__(self, MAXARRSIZE=100):
+        """This function initializes the class."""
+        """The defaul size of the Hash Table is 100. However, it can be
+        set to any number."""
+        self.MAXARRSIZE = MAXARRSIZE
         self.array = [None for i in range(self.MAXARRSIZE)]
         # this list technique is called list comprehension,
         # it's just a more concise way of creating and/or operating(doing something with) your list.
@@ -45,4 +48,4 @@ if __name__ == "__main__":
     HT["mark"] = "Rebecca Chambers"
     HT["september 12"] = 20000000
     print(HT["Mark Baguio"])
-    # print(HT.array, end=" ")
+    print(HT.array, end=" ")
