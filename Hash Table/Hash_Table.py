@@ -48,4 +48,4 @@ if __name__ == "__main__":
     HT["mark"] = "Rebecca Chambers"
     HT["september 12"] = 20000000
     print(HT["Mark Baguio"])
-    print(HT.array, end=" ")
+    # print(HT.array, end=" ")
