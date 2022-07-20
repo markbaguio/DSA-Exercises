@@ -36,6 +36,12 @@ class HashTable:
         value_key = self.get_hash(key)
         return self.array[value_key]
 
+    def __delitem__(self, key):
+        """This function deletes the value of the given key. 
+        Syntax: del object[key]"""
+        value_key = self.get_hash(key)
+        self.array[value_key] = None
+
 
 if __name__ == "__main__":
     HT = HashTable()
@@ -48,4 +54,4 @@ if __name__ == "__main__":
     HT["mark"] = "Rebecca Chambers"
     HT["september 12"] = 20000000
     print(HT["Mark Baguio"])
-    # print(HT.array, end=" ")
+    print(HT.array, end=" ")
