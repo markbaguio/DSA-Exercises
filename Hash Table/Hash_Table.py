@@ -2,6 +2,8 @@ class HashTable:
     def __init__(self):
         self.MAXARRSIZE = 100
         self.array = [None for i in range(self.MAXARRSIZE)]
+        # this list technique is called list comprehension,
+        # it's just a more concise way of creating and/or operating(doing something with) your list.
 
     def get_hash(self, key):
         """This function returns the hash value of a given key."""
@@ -29,5 +31,7 @@ if __name__ == "__main__":
     HT = HashTable()
     HT.add_value("Mark Baguio", "Ada Wong")
     HT.add_value("mark", "Rebecca Chambers")
+    HT.add_value("september 12", 20000000)
     print(HT.get_value("Mark Baguio"))
+    print(HT.get_value("september 12"))
     # print(HT.array, end=" ")
