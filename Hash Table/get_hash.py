@@ -1,6 +1,6 @@
 """July 7, 2022
     Mark Godwin C. Baguio
-    
+
 This function is for testing purposes only."""
 
 
@@ -12,4 +12,4 @@ def get_hash(key):
 
 
 if __name__ == "__main__":
-    print(get_hash("Mark Baguio"))
+    print("The hash value is: {}".format(get_hash("Mark Baguio")))

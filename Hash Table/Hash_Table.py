@@ -16,11 +16,18 @@ class HashTable:
         self.array[k] = value
 
     def get_value(self, key):
-        pass
+        """This function returns the value of the given key."""
+        """This is a simple get function."""
+        # for element in self.array:
+        #     if self.get_hash(key):
+        #         return self.array[self.get_hash(key)]
+        value_key = self.get_hash(key)
+        return self.array[value_key]
 
 
 if __name__ == "__main__":
     HT = HashTable()
     HT.add_value("Mark Baguio", "Ada Wong")
+    HT.add_value("mark", "Rebecca Chambers")
     print(HT.get_value("Mark Baguio"))
     # print(HT.array, end=" ")
