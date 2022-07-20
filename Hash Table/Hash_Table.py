@@ -1,4 +1,4 @@
-"""This is an implementation of a dictionary in python. 
+"""This is an implementation of a dictionary(JAVA: HashMap or LinkedHashMap, C: std::map) in python. 
 Basically, this is how a dictionary works in the background.
 I hope this strengthen your understanding with python dictionary."""
 
