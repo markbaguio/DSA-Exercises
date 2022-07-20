@@ -42,6 +42,7 @@ if __name__ == "__main__":
     # print(HT.get_value("Mark Baguio"))
     # print(HT.get_value("september 12"))
     HT["Mark Baguio"] = "Ada Wong"
+    HT["mark"] = "Rebecca Chambers"
+    HT["september 12"] = 20000000
     print(HT["Mark Baguio"])
-    help(HashTable)
     # print(HT.array, end=" ")
