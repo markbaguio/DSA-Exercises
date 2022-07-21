@@ -6,7 +6,7 @@ I hope this strengthen your understanding with python dictionary."""
 class HashTable:
     def __init__(self, MAXARRSIZE=100):
         """This function initializes the class."""
-        """The defaul size of the Hash Table is 100. However, it can be
+        """The default size of the Hash Table is 100. However, it can be
         set to any number."""
         self.MAXARRSIZE = MAXARRSIZE
         self.array = [None for i in range(self.MAXARRSIZE)]
