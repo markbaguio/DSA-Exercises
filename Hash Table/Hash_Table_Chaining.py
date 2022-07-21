@@ -35,7 +35,8 @@ class HashTable:
                 found = True
                 break
 
-        if not found:  # this line will be executed if the given key does not exist.
+        # this line will be executed if the given key does not exist or if you want to update a key-value pair.
+        if not found:
             self.array[value_key].append((key, value))
 
     def __getitem__(self, key):
@@ -71,6 +72,8 @@ if __name__ == "__main__":
     ht["march 20"] = 20000
     ht["Mark Baguio"] = "Ada Wong"
     ht["0"] = "Rebecca Chambers"
+    ht["1"] = "Jill Valentine"
+    ht["2"] = "Excella Gionne"
     del ht["march 6"]
-    print(ht["march 17"])
+    print(ht["0"])
     print(ht.array)
