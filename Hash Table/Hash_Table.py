@@ -1,6 +1,9 @@
-"""This is an implementation of a dictionary(JAVA: HashMap or LinkedHashMap, C: std::map) in python. 
-Basically, this is how a dictionary works in the background.
-I hope this strengthen your understanding with python dictionary."""
+""" Engr. Mark Godwin C. Baguio
+    July 21, 2022
+    
+    This is an implementation of a dictionary(JAVA: HashMap or LinkedHashMap, C: std::map) in python. 
+    Basically, this is how a dictionary works in the background.
+    I hope this strengthen your understanding with python dictionary."""
 
 
 class HashTable:

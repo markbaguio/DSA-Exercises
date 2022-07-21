@@ -1,1 +1,1 @@
-print(HT.array, end=" ")
+del ht["march 6"]
