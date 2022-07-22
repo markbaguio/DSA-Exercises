@@ -8,7 +8,7 @@ def get_hash(key):
     total = 0
     for char in key:
         total += ord(char)
-    return total % 4 
+    return total % 4
 
 
 lst = [1998, "Raccoon City", "Incident", "Hellfire"]

@@ -21,4 +21,35 @@ import csv
 
 
 if __name__ == "__main__":
-    pass
+    """ 1. nyc_weather.csv contains new york city weather for first few days in the month of January. 
+        Write a program that can answer following,
+        ->A. What was the average temperature in first week of Jan
+        ->B. What was the maximum temperature in first 10 days of Jan """
+
+    filePath = "C:/Users/markb/Desktop/Academics/Programming/Python/DSA Exercises/Hash Table/Exercise assets/nyc_weather.csv"
+
+    hashtable = HashTable(20)
+
+    with open(filePath, "r") as file:
+        reader = csv.reader(file)
+        total = 0
+        averageTemp = 0
+        numberOfDays = 7
+        intTemp = []
+
+        next(reader)
+        for line in reader:
+            # print(line)
+            hashtable[line[0]] = line[1]
+            intTemp.append(int(line[1]))
+        """A. What was the average temperature in first week of Jan"""
+        for indx, temp in enumerate(intTemp):
+            # print(indx, temp)
+            total += temp
+
+            if indx == 6:
+                averageTemp = total / numberOfDays
+                break
+
+        print("The average temperature in the first week of Jan is: {}°C".format(
+            averageTemp))
